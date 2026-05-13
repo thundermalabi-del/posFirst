@@ -1,0 +1,47 @@
+# Robots.txt for POS (Point of Sale) System
+# This is a private business application - restrict all crawlers
+
+User-agent: *
+Disallow: /
+
+# Block specific sensitive areas
+Disallow: /pos/
+Disallow: /stock/
+Disallow: /reports/
+Disallow: /invoice/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /store/settings
+
+# Block Laravel specific directories
+Disallow: /storage/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /routes/
+Disallow: /vendor/
+Disallow: /app/
+Disallow: /tests/
+
+# Block sensitive files
+Disallow: /.env
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /artisan
+Disallow: /phpunit.xml
+
+# Allow only favicon and basic assets if needed
+Allow: /favicon.ico
+Allow: /build/assets/
+
+# Crawl delay (optional - uncomment if needed)
+# Crawl-delay: 10
+
+# Sitemap (uncomment and update URL if you have one)
+# Sitemap: https://yourdomain.com/sitemap.xml
